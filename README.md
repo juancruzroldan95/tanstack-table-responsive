@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# TanStack Table Responsive Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple demo project showing how to create a **responsive table** with **collapsible hidden columns** using [TanStack Table](https://tanstack.com/table).
 
-Currently, two official plugins are available:
+Depending on the screen size, the table automatically hides columns, and users can expand rows to view the hidden data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+- Vite + React
+- TypeScript
+- [@tanstack/react-table](https://tanstack.com/table)
 
-## Expanding the ESLint configuration
+## 📸 Demo
+👉 https://tanstack-table-responsive.vercel.app/
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ How It Works
+- **Column visibility** is toggled dynamically based on screen width (using custom breakpoints).
+- **Expandable rows** show hidden column data below the main row.
+- **Custom expander** button to expand and collapse additional data.
+The breakpoints can be easily customized to fit your needs!
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📂 Project Structure
+```
+src/
+ ├── components/
+ │    └── Table.tsx
+ ├── mocks/
+ │    └── data.ts
+ ├── types/
+ │    └── person.ts
+ └── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 📦 Getting Started
+Clone the repo and install dependencies:
+```bash
+git clone https://github.com/juancruzroldan95/tanstack-table-responsive.git
+cd tanstack-table-responsive
+npm install
+npm run dev
 ```
+The app will be running at `http://localhost:5173`.
+
+## 📑 Article
+You can read the full step-by-step article explaining how this project was built [**here**](https://dev.to/juancruzroldan/responsive-collapse-of-columns-in-tanstack-table-2175).
