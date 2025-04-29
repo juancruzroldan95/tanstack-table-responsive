@@ -4,13 +4,13 @@ This is a simple demo project showing how to create a **responsive table** with 
 
 Depending on the screen size, the table automatically hides columns, and users can expand rows to view the hidden data.
 
+## 📑 Article
+You can read the full step-by-step article explaining how this project was built [**here**](https://dev.to/juancruzroldan/responsive-collapse-of-columns-in-tanstack-table-2175).
+
 ## 🚀 Tech Stack
 - Vite + React
 - TypeScript
 - [@tanstack/react-table](https://tanstack.com/table)
-
-## 📸 Demo
-👉 https://tanstack-table-responsive.vercel.app/
 
 ## 🛠️ How It Works
 - **Column visibility** is toggled dynamically based on screen width (using custom breakpoints).
@@ -39,6 +39,3 @@ npm install
 npm run dev
 ```
 The app will be running at `http://localhost:5173`.
-
-## 📑 Article
-You can read the full step-by-step article explaining how this project was built [**here**](https://dev.to/juancruzroldan/responsive-collapse-of-columns-in-tanstack-table-2175).
